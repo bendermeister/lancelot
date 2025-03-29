@@ -19,6 +19,9 @@
         devShells.default = with pkgs; mkShell {
           buildInputs = [
             rust-bin.stable.latest.default
+            rust-analyzer
+            sqlitebrowser
+            sqlite
           ];
         };
       }
