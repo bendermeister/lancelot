@@ -6,4 +6,5 @@ edition = "2024"
 [dependencies]
 anyhow = "1.0.97"
 chrono = "0.4.40"
+mittelmeer = { path = "../mittelmeer" }
 rusqlite = { version = "0.34.0", features = ["bundled"] }
