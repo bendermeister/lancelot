@@ -7,11 +7,11 @@ impl Migration for Migration000 {
         db.execute(
             "
             CREATE TABLE todos (
-                id          BIGINT NOT NULL UNIQUE AUTOINCREMENT,
+                id          INTEGER NOT NULL UNIQUE,
                 title       TEXT NOT NULL,
                 body        TEXT NOT NULL,
-                scheduled   TEXT NOT NULL,
-                deadline    TEXT NOT NULL,
+                scheduled   TEXT,
+                deadline    TEXT,
                 state       INTEGER NOT NULL,
 
                 PRIMARY KEY(id)
@@ -20,6 +20,6 @@ impl Migration for Migration000 {
             rusqlite::params![],
         )?;
 
-        todo!()
+        Ok(())
     }
 }
