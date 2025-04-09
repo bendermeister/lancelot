@@ -9,10 +9,11 @@ impl Migration for Migration000 {
             CREATE TABLE todos (
                 id          INTEGER NOT NULL UNIQUE,
                 title       TEXT NOT NULL,
-                body        TEXT NOT NULL,
-                scheduled   TEXT,
-                deadline    TEXT,
-                state       INTEGER NOT NULL,
+                path        TEXT NOT NULL,
+                scheduled   INTEGER,
+                deadline    INTEGER,
+                opened      INTEGER NOT NULL,
+                closed      INTEGER,
 
                 PRIMARY KEY(id)
             );
